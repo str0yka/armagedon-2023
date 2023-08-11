@@ -1,10 +1,10 @@
-type GetClassNamesParams = Array<
-| { [key: string]: boolean | string; }
+type GetClassNameParams = Array<
+| { [key: string]: boolean; }
 | string
 | undefined
 >;
 
-export const getClassNames = (...classNames: GetClassNamesParams) => {
+export const getClassName = (...classNames: GetClassNameParams) => {
   const result: string[] = [];
 
   for (let i = 0; i < classNames.length; i++) {

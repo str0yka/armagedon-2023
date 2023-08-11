@@ -1,20 +1,20 @@
 import localFont from 'next/font/local';
 import { Passion_One } from 'next/font/google';
 
-export const Helvetica = localFont({
+export const helvetica = localFont({
   src: [
     {
-      path: './src/helvetica_light.otf',
+      path: './src/helvetica/light.otf',
       weight: '300',
       style: 'normal',
     },
     {
-      path: './src/helvetica_regular.otf',
+      path: './src/helvetica/regular.otf',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './src/helvetica_bold.otf',
+      path: './src/helvetica/bold.otf',
       weight: '700',
       style: 'normal',
     },
@@ -22,7 +22,7 @@ export const Helvetica = localFont({
   variable: '--font-helvetica',
 });
 
-export const PassionOne = Passion_One({
+export const passionOne = Passion_One({
   weight: '400',
   style: 'normal',
   subsets: ['latin'],

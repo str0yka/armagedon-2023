@@ -22,7 +22,7 @@ export function AsteroidCard() {
           variant="filledTonal"
           size="small"
         >
-          заказать
+          ЗАКАЗАТЬ
         </Button>
         <span>⚠ Опасен</span>
       </div>

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 import { Header, Footer } from '~components';
-import { getClassNames } from '~utils';
+import { getClassName } from '~utils';
 
-import { Helvetica, PassionOne } from '~fonts';
+import { helvetica, passionOne } from '~fonts';
 import '~styles/global.css';
 import '~styles/zero.css';
 
@@ -11,15 +11,15 @@ export const metadata: Metadata = {
   title: 'Armageddon',
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="ru"
-      className={getClassNames(Helvetica.variable, PassionOne.variable)}
+      className={getClassName(helvetica.variable, passionOne.variable)}
     >
       <body>
         <Header />

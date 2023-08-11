@@ -4,6 +4,10 @@
     gap: 8px;
 }
 
+.time {
+    font-size: 24px;
+}
+
 .info {
     display: flex;
     gap: 8px;

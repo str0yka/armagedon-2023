@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-import { getClassNames } from '~utils';
+import { getClassName } from '~utils';
 
 import s from './Button.module.css';
 
@@ -21,7 +21,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     <button
       {...otherProps}
       ref={ref}
-      className={getClassNames(
+      className={getClassName(
         s.button,
         s[size],
         s[variant],

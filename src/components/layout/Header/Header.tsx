@@ -1,9 +1,15 @@
 import Link from 'next/link';
+
 import s from './Header.module.css';
 
-export function Header() {
+interface HeaderProps extends React.ComponentProps<'header'> {}
+
+export function Header(props: HeaderProps) {
   return (
-    <header className={s.header}>
+    <header
+      {...props}
+      className={s.header}
+    >
       <h1 className={s.title}>
         <Link href="/">ARMAGEDDON</Link>
       </h1>

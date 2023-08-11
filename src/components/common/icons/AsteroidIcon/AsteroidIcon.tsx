@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { getClassNames } from '~utils';
+import { getClassName } from '~utils';
 
 import s from './AsteroidIcon.module.css';
 
@@ -9,5 +7,5 @@ interface AsteroidIconProps {
 }
 
 export function AsteroidIcon({ size }: AsteroidIconProps) {
-  return <div className={getClassNames(s.icon, s[size])} />;
+  return <div className={getClassName(s.icon, s[size])} />;
 }
