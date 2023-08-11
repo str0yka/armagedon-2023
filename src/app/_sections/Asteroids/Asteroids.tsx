@@ -1,4 +1,6 @@
-export default function Home() {
+import s from './Asteroids.module.css';
+
+export function Asteroids() {
   return (
     <section>
       <div>

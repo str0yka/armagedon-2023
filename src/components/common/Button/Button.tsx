@@ -6,7 +6,7 @@ import s from './Button.module.css';
 
 interface ButtonProps extends React.ComponentProps<'button'> {
   variant: 'filled' | 'filledTonal'
-  size: 'small' | 'medium' | 'large'
+  size: 'small' | 'large'
   active?: boolean
 }
 

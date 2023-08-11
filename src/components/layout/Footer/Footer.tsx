@@ -1,8 +1,13 @@
 import s from './Footer.module.css';
 
-export function Footer() {
+interface FooterProps extends React.ComponentProps<'footer'> {}
+
+export function Footer(props: FooterProps) {
   return (
-    <footer className={s.footer}>
+    <footer
+      {...props}
+      className={s.footer}
+    >
       <p>© Все права и планета защищены</p>
     </footer>
   );

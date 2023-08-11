@@ -1,0 +1,25 @@
+.main {
+    position: relative;
+}
+
+.backgroundImage {
+    position: fixed;
+    top: 20%;
+    left: 0;
+
+    width: 100%;
+    max-height: 620px;
+    height: 100%;
+    z-index: -1;
+
+    background-image: url("/images/earth.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: -250px top;
+}
+
+@media (min-width: 900px) {
+    .backgroundImage {
+        background-position: -140px top;
+    }
+}

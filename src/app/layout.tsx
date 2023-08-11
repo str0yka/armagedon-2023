@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 
-import { Header } from '~components';
-import { Footer } from '~/components/layout/Footer/Footer';
+import { Header, Main, Footer } from '~components';
 import { getClassNames } from '~utils';
 
 import { Helvetica, PassionOne } from '~fonts';
@@ -24,7 +23,7 @@ export default function RootLayout({
     >
       <body>
         <Header />
-        {children}
+        <Main>{children}</Main>
         <Footer />
       </body>
     </html>
