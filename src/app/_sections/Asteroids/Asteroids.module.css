@@ -1,0 +1,48 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.titleBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.titleButton {
+    font-size: 16px;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+.titleButton:first-child {
+    padding-right: 5px;
+    border-right: 1px var(--color-neutral-100) solid;
+}
+
+.titleButton:nth-child(n + 2) {
+    padding-left: 5px;
+}
+
+.titleButton.acitve {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 1035px) {
+    .section {
+        width: 402px;
+    }
+}

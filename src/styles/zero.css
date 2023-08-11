@@ -9,3 +9,7 @@ a {
     color: inherit;
     font-family: inherit;
 }
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.info {
+    display: flex;
+    gap: 8px;
+}
+
+.asteroidInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.asteroidName {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.asteroidDiameter {
+    font-size: 11px;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}

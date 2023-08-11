@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { Header, Main, Footer } from '~components';
+import { Header, Footer } from '~components';
 import { getClassNames } from '~utils';
 
 import { Helvetica, PassionOne } from '~fonts';
@@ -23,7 +23,7 @@ export default function RootLayout({
     >
       <body>
         <Header />
-        <Main>{children}</Main>
+        {children}
         <Footer />
       </body>
     </html>
