@@ -1,20 +1,57 @@
 import { AsteroidIcon, Button, DoubleEndedArrow } from '~ui';
 
 import s from './AsteroidCard.module.css';
+import { getDayMonthYear } from '~utils';
 
-export function AsteroidCard() {
+type AsteroidCardProps = {
+  name: string,
+  closeApproachDate: number,
+  missDistance: number
+  diameter: number
+  isDanger: boolean
+};
+
+export function AsteroidCard({
+  name,
+  closeApproachDate,
+  diameter,
+  missDistance,
+  isDanger,
+}: AsteroidCardProps) {
+  const {
+    day,
+    monthName,
+    year,
+  } = getDayMonthYear(closeApproachDate);
+
   return (
     <article className={s.card}>
-      <h3 className={s.time}>12 сентября 2023</h3>
+      <h3 className={s.time}>
+        {day}
+        {' '}
+        {monthName}
+        {' '}
+        {year}
+      </h3>
       <div className={s.info}>
         <div className={s.distance}>
-          <span>3 лунные орбиты</span>
+          <span>
+            {missDistance}
+            {' '}
+            лунные орбиты
+          </span>
           <DoubleEndedArrow />
         </div>
         <AsteroidIcon size="large" />
         <div className={s.asteroidInfo}>
-          <span className={s.asteroidName}>2021 FQ</span>
-          <span className={s.asteroidDiameter}>Ø 85 м</span>
+          <span className={s.asteroidName}>{name}</span>
+          <span className={s.asteroidDiameter}>
+            Ø
+            {' '}
+            {diameter}
+            {' '}
+            м
+          </span>
         </div>
       </div>
       <div className={s.actions}>
@@ -24,7 +61,7 @@ export function AsteroidCard() {
         >
           ЗАКАЗАТЬ
         </Button>
-        <span>⚠ Опасен</span>
+        {isDanger && <span>⚠ Опасен</span>}
       </div>
     </article>
   );
