@@ -7,6 +7,7 @@ type AsteroidCardProps = {
   name: string,
   closeApproachDate: number,
   missDistance: number
+  missDistanceMeasure: keyof AsteroidCloseApproachData['miss_distance'],
   diameter: number
   isDanger: boolean
 };
@@ -16,6 +17,7 @@ export function AsteroidCard({
   closeApproachDate,
   diameter,
   missDistance,
+  missDistanceMeasure,
   isDanger,
 }: AsteroidCardProps) {
   const {
@@ -38,11 +40,12 @@ export function AsteroidCard({
           <span>
             {missDistance}
             {' '}
-            лунные орбиты
+            {missDistanceMeasure === 'lunar' && 'лунных орбит'}
+            {missDistanceMeasure === 'kilometers' && 'километров'}
           </span>
           <DoubleEndedArrow />
         </div>
-        <AsteroidIcon size="large" />
+        <AsteroidIcon size={diameter > 150 ? 'large' : 'small'} />
         <div className={s.asteroidInfo}>
           <span className={s.asteroidName}>{name}</span>
           <span className={s.asteroidDiameter}>

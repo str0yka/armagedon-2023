@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 
 interface UseRequestParams<T> {
   request: () => Promise<T>,
-  validate?: boolean
-  dependencies?: any[]
+  validate?: boolean,
+  dependencies?: any[],
 }
 
 export const useRequest = <T>({
