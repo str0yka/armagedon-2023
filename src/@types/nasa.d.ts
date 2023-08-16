@@ -11,6 +11,9 @@ type AsteroidCloseApproachData = {
     lunar: string,
     kilometers: string,
   },
+  relative_velocity: {
+    kilometers_per_second: string,
+  },
   orbiting_body: string,
 };
 

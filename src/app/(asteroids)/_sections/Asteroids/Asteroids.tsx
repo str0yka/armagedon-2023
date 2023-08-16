@@ -6,8 +6,7 @@ import { useObserver, useRequest } from '~hooks';
 import { getClassName, getDayMonthYear } from '~utils';
 import { NasaApi } from '~/utils/api';
 
-import { AsteroidCard } from './AsteroidCard/AsteroidCard';
-
+import { AsteroidCard } from '../../_components';
 import s from './Asteroids.module.css';
 
 export function Asteroids() {
@@ -35,7 +34,7 @@ export function Asteroids() {
       if (!isLoading && asteroids) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setSearchDate((prev) => prev + (1000 * 60 * 60 * 24));
+            setSearchDate((prev) => prev + 1000 * 60 * 60 * 24);
           }
         });
       }
@@ -79,14 +78,16 @@ export function Asteroids() {
         {asteroids?.map((asteroid) => (
           <AsteroidCard
             key={asteroid.id}
+            id={asteroid.id}
             name={asteroid.name}
             isDanger={asteroid.is_potentially_hazardous_asteroid}
             closeApproachDate={asteroid.close_approach_data[0].epoch_date_close_approach}
             diameter={Math.round(asteroid.estimated_diameter.meters.estimated_diameter_max)}
             missDistance={
-            Math.round(Number(asteroid.close_approach_data[0].miss_distance[missDistanceMeasure]))
-          }
+              Math.round(Number(asteroid.close_approach_data[0].miss_distance[missDistanceMeasure]))
+            }
             missDistanceMeasure={missDistanceMeasure}
+            cartAction={asteroid}
           />
         ))}
         {isLoading && <span>loading...</span>}

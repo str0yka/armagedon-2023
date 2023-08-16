@@ -1,0 +1,19 @@
+.layout {
+  margin-top: 33px;
+
+  width: 260px;
+
+  --main-page-left: 15vw;
+  left: var(--main-page-left);
+}
+
+@media (min-width: 1025px) {
+  .layout {
+    --main-page-left: 33vw;
+    --list-block-width: 402px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: var(--list-block-width) auto;
+  }
+}

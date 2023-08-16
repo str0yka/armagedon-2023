@@ -21,7 +21,13 @@ export const getDayMonthYear = (dateOrSeconds: number | Date) => {
   if (month === 11) monthName = 'нояб';
   if (month === 12) monthName = 'дек';
 
+  const dateString = `${day} ${monthName} ${year}`;
+
   return {
-    day, month, year, monthName,
+    day,
+    month,
+    year,
+    monthName,
+    dateString,
   };
 };

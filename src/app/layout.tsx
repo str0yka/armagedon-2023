@@ -8,11 +8,11 @@ import '~styles/global.css';
 import '~styles/zero.css';
 
 export const metadata: Metadata = {
-  title: 'Armageddon',
+  title: '🌠 Armageddon',
 };
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {

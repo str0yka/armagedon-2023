@@ -1,0 +1,19 @@
+.asteroid {
+  font-size: 14px;
+}
+
+.titleBlock {
+  margin-bottom: 24px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 1025px) {
+  .asteroid {
+    font-size: 16px;
+  }
+}
