@@ -1,2 +1,2 @@
-export * from './helvetica'
-export * from './passionOne'
+export * from './helvetica';
+export * from './passionOne';

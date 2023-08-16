@@ -4,7 +4,7 @@ import { useRequest } from '~hooks';
 import { NasaApi } from '~utils/api';
 import { getDayMonthYear } from '~utils/helpers';
 
-import s from './page.module.css';
+import s from './AsteroidFullInfo.module.css';
 
 interface AsteroidFullInfoProps {
   params: {

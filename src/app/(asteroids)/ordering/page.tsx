@@ -1,5 +1,5 @@
-import { Order } from "./_sections"
+import { Order } from './_sections';
 
 export default function OrderingPage() {
-  return <Order/>
+  return <Order />;
 }

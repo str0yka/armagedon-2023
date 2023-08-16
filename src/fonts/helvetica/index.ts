@@ -3,17 +3,17 @@ import localFont from 'next/font/local';
 export const helvetica = localFont({
   src: [
     {
-      path: './src/helvetica/light.otf',
+      path: './src/light.otf',
       weight: '300',
       style: 'normal',
     },
     {
-      path: './src/helvetica/regular.otf',
+      path: './src/regular.otf',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './src/helvetica/bold.otf',
+      path: './src/bold.otf',
       weight: '700',
       style: 'normal',
     },
