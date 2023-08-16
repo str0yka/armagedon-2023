@@ -5,7 +5,7 @@
 ### Технологии, используемые при создании проекта:
 + **TypeScript**
 + **React**
-+ **Next.js** (App Router, Server Actions)
++ **Next.js** (App Router)
 + **CSS MODULES + Adaptive**
 + **ESLint**
 
