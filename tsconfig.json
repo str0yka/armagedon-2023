@@ -24,7 +24,8 @@
       "~components": ["./src/components"],
       "~ui": ["./src/components/common"],
       "~store": ["./src/store"],
-      "~utils": ["./src/utils"],
+      "~utils/helpers": ["./src/utils/helpers"],
+      "~utils/api": ["./src/utils/api"],
       "~hooks": ["./src/hooks"],
       "~styles/*": ["./src/styles/*"],
       "~fonts": ["./src/fonts"]

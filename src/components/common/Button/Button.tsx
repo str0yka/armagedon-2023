@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
 
-import { getClassName } from '~utils';
+import { getClassName } from '~utils/helpers';
 
 import s from './Button.module.css';
 

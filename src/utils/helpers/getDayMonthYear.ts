@@ -8,7 +8,6 @@ export const getDayMonthYear = (dateOrSeconds: number | Date) => {
   const year = date.getFullYear();
 
   let monthName: string = 'янв';
-
   if (month === 2) monthName = 'фев';
   if (month === 3) monthName = 'март';
   if (month === 4) monthName = 'апр';

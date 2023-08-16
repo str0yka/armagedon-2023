@@ -8,29 +8,29 @@ interface UseObserverParams {
 }
 
 export const useObserver = <
-  RootType extends Element,
-  ObserverRef extends Element,
+  RootElement extends Element,
+  ObserverElement extends Element,
 >({
     callback,
     options,
     dependencies = [],
     validate = true,
   }: UseObserverParams) => {
-  const rootRef = useRef<RootType>(null);
-  const nodeRef = useRef<ObserverRef>(null);
+  const rootRef = useRef<RootElement>(null);
+  const observerRef = useRef<ObserverElement>(null);
   const observer = useRef<IntersectionObserver | null>();
 
   useEffect(() => {
-    if (validate && nodeRef.current && rootRef.current) {
+    if (validate && observerRef.current && rootRef.current) {
       if (observer.current) {
         observer.current?.disconnect();
         observer.current = null;
       }
 
       observer.current = new IntersectionObserver(callback, options);
-      observer.current?.observe(nodeRef.current);
+      observer.current?.observe(observerRef.current);
     }
   }, dependencies);
 
-  return { rootRef, nodeRef };
+  return { rootRef, observerRef };
 };

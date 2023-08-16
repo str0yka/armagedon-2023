@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 import { AsteroidIcon, DoubleEndedArrow } from '~ui';
-import { getDayMonthYear } from '~utils';
+import { getDayMonthYear } from '~utils/helpers';
 
-import { ToggleCartButton } from './ToggleCartButton';
+import { ToggleCartButton } from './ToggleCartButton/ToggleCartButton';
 import s from './AsteroidCard.module.css';
 
 type AsteroidCardProps = {

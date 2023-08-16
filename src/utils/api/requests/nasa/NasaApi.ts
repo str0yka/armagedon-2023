@@ -1,6 +1,8 @@
-import { API } from '~/utils/api/instance';
+import { API } from '~utils/api';
 
-const nasaApi = new API(process.env.NEXT_PUBLIC_NASA_API_URL as string);
+const nasaApi = new API({
+  baseURL: process.env.NEXT_PUBLIC_NASA_API_URL as string,
+});
 
 interface GetNeoWsAsteroidsParams {
   startDate: {

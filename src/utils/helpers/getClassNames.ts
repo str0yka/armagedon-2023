@@ -1,5 +1,5 @@
 type GetClassNameParams = Array<
-| { [key: string]: boolean; }
+| Record<string, boolean>
 | string
 | undefined
 >;

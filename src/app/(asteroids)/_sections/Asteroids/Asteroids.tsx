@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import { useObserver, useRequest } from '~hooks';
-import { getClassName, getDayMonthYear } from '~utils';
+import { getClassName, getDayMonthYear } from '~utils/helpers';
 import { NasaApi } from '~/utils/api';
 
 import { AsteroidCard } from '../../_components';
@@ -29,7 +29,7 @@ export function Asteroids() {
     dependencies: [searchDate],
   });
 
-  const { rootRef, nodeRef } = useObserver<HTMLDivElement, HTMLDivElement>({
+  const { rootRef, observerRef } = useObserver<HTMLDivElement, HTMLDivElement>({
     callback: (entries) => {
       if (!isLoading && asteroids) {
         entries.forEach((entry) => {
@@ -92,7 +92,7 @@ export function Asteroids() {
         ))}
         {isLoading && <span>loading...</span>}
         {errors && <span>{errors}</span>}
-        <div ref={nodeRef} />
+        <div ref={observerRef} />
       </div>
     </section>
   );

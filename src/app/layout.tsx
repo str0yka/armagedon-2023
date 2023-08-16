@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { Header, Footer } from '~components';
-import { getClassName } from '~utils';
+import { getClassName } from '~utils/helpers';
 
 import { helvetica, passionOne } from '~fonts';
 import '~styles/global.css';

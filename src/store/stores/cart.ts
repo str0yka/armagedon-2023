@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from 'react';
+
 import { createStore } from '~store';
 
 const initialValue: Asteroid[] = [];

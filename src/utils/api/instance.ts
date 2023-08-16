@@ -2,22 +2,23 @@ interface ApiRequestInit extends Omit<RequestInit, 'body'> {
   body?: any
 }
 
+interface ApiParams {
+  baseURL: string
+}
+
 export class API {
   readonly baseURL: string;
 
-  constructor(baseURL: string) {
+  constructor({ baseURL }: ApiParams) {
     this.baseURL = baseURL;
   }
 
-  async request<T>(url: string, init?: ApiRequestInit): Promise<{
-    ok: true,
-    data: T
-  } | {
-    ok: false,
-    error: any
-  }> {
+  async request<T>(url: string, init?: ApiRequestInit): Promise<
+    | { ok: true, data: T }
+    | { ok: false, error: any }
+    > {
     try {
-      const response: T = await fetch(this.baseURL + url, {
+      const response = await fetch(this.baseURL + url, {
         ...init,
         headers: {
           ...init?.headers,
@@ -25,11 +26,12 @@ export class API {
         },
         body: JSON.stringify(init?.body),
       })
-        .then((res) => res.json());
+      
+      const data: T = await response.json()
 
       return {
         ok: true,
-        data: response,
+        data
       };
     } catch (error) {
       return {
