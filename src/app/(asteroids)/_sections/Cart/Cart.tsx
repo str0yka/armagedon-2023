@@ -20,7 +20,10 @@ export function Cart() {
             : 'пуста'}
         </span>
       </div>
-      <Link href="/ordering">
+      <Link
+        href="/ordering"
+        replace
+      >
         <Button
           variant="filled"
           size="large"

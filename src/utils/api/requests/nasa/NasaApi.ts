@@ -1,4 +1,4 @@
-import { API } from '~utils/api';
+import { API } from '~/utils/api/instance';
 
 const nasaApi = new API({
   baseURL: process.env.NEXT_PUBLIC_NASA_API_URL as string,
