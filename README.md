@@ -7,6 +7,7 @@
 + **React**
 + **Next.js** (App Router)
 + **CSS MODULES + Adaptive**
++ **Mobile First**
 + **ESLint**
 
 ### В данном проекте можно найти кастомные реализации:
